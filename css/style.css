@@ -427,7 +427,7 @@ main{
     flex-direction: column;
     width: 100%;
     min-width: 320px;
-    height: auto;
+    height: 100%;
 }
 
 .background-image-two {
@@ -451,16 +451,11 @@ main .main-two-landing{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: auto;
     flex-wrap: wrap;
     flex-direction: row;
-    /* width: 100%; */
-    
     padding-bottom: 6rem;
-
-    position: relative;
+    /* position: relative; */
     z-index: 1;
-
 }
 
 .landing-section {
@@ -570,6 +565,18 @@ main .main-two-landing{
 /* SECCION LANDING 1 -- SECCION LANDING 1 -- SECCION LANDING 1 -- */
 
 
+
+main .main-three-landing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-bottom: 6rem;
+    /* position: relative; */
+    z-index: 1;
+}
+
 /* Fondo para la tercera sección */
 .background-image-three {
     margin-top: 10rem;
@@ -596,8 +603,11 @@ main .main-two-landing{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
     padding-bottom: 6rem;
+}
+
+.main-three-landing{
+    height: auto;
 }
 
 .landing-section-left {
@@ -688,42 +698,59 @@ main .main-two-landing{
     margin-right: auto;
 }
 
+.cbForm {
+    display: flex;
+    align-self: center;
+    width: 20rem;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    background-color: var(--ColPrin);
+    color: white;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.cbForm:hover {
+    background-color: #79e0fd;
+    color: var(--ColPrin);
+}
+
 .ag-format-container {
     width: 100%;
+    height: auto;
     margin: 0 auto;
+    border: #000000 solid 1px;
 }
   
 .ag-courses_box {
 display: flex;
-flex-direction: row;
+flex-direction: column;
 -webkit-box-align: start;
 -ms-flex-align: start;
 align-items: flex-start;
 -ms-flex-wrap: wrap;
 flex-wrap: wrap;
-padding: 50px 0;
 }
 
+/* con esta linea estilamos el contenedor de los cards */
 .ag-courses_item {
--ms-flex-preferred-size: calc(33.33333% - px);
-flex-basis: calc(33.33333% - 30px);
-
-margin: 0 15px 30px;
-
+display: flex;
+flex-direction: column;
+align-self: center;
 overflow: hidden;
-
 border-radius: 28px !important;
 
 }
 
 .ag-courses-item_link {
-width: 16rem;
+width: 40rem;
 display: block;
 padding: 20px 20px;
 background-color: var(--ColTer);
-
 overflow: hidden;
-
 position: relative;
 }
 
@@ -740,8 +767,8 @@ transform: scale(10);
 }
 
 .ag-courses-item_title {
-    display: flex;
-    flex-direction: column;
+display: flex;
+flex-direction: column;
 margin-left: auto;
 margin-right: auto;
 min-height: 87px;
@@ -755,6 +782,17 @@ color: #FFF;
 
 z-index: 2;
 position: relative;
+}
+
+.tit-card{
+    text-align: center;
+}
+
+.text-card-blu{
+    font-size: 1.8rem;
+    font-weight: 100;
+    margin-top: -3rem;
+    text-align: center;
 }
 
 .text-card{
