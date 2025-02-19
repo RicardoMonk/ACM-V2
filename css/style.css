@@ -449,12 +449,13 @@ main{
 
 main .main-two-landing{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: auto;
+    min-height: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* width: 100%; */
+    
     padding-bottom: 6rem;
 
     position: relative;
@@ -463,12 +464,13 @@ main .main-two-landing{
 }
 
 .landing-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas */
-    grid-template-rows: repeat(4, 1fr); /* Cuatro filas */
-    height: 100vh; /* Ocupa toda la pantalla */
-    padding: 2rem;
-    /* border: white solid 1px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px; /* Máximo ancho en móviles */
+    width: 90%;
+    /* border: #000000 solid 1px; */
 }
 
 .title {
@@ -520,7 +522,10 @@ main .main-two-landing{
     margin-top: 7rem;
     text-align: right;
     font-size: 2rem !important;
-   
+}
+
+.desc-land{
+    text-align:center;
 }
 
 .button-container {
@@ -689,9 +694,8 @@ main .main-two-landing{
 }
   
 .ag-courses_box {
-display: -webkit-box;
-display: -ms-flexbox;
 display: flex;
+flex-direction: row;
 -webkit-box-align: start;
 -ms-flex-align: start;
 align-items: flex-start;
@@ -1058,19 +1062,6 @@ section div a{
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Este tiene mucho código */
