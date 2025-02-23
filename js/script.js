@@ -7,20 +7,8 @@ burgerMenu.addEventListener('click', function(){
     show.classList.toggle("show");
 })
 
-/*Efecto contador de click*/
-function incrementButton(){
-    var element = document.getElementById('incrementText');
-    var value = element.innerHTML;
-
-    ++value;
-
-    console.log(value);
-    document.getElementById('incrementText').innerHTML = value;
-
-}
 
 //this code work to animate loader
-
 window.addEventListener("load", function() {
     const loader = document.querySelector(".loader");
     loader.className += " hidden";
@@ -109,46 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 });
 
-
-
-
-// Función para calcular el brillo de un color RGB
-function getBrightness(rgb) {
-    const [r, g, b] = rgb;
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b; // Fórmula estándar de luminancia
-}
-
-function getNavbarVisibleColor() {
-    const navbar = document.querySelector('.navbar');
-    const rect = navbar.getBoundingClientRect(); // Obtener posición y tamaño de la navbar
-    const canvas = document.createElement('canvas');
-    const context = canvas.getContext('2d');
-
-    // Configurar canvas del tamaño de la navbar
-    canvas.width = rect.width;
-    canvas.height = rect.height;
-
-    // Dibujar navbar en el canvas para capturar el color visible
-    context.drawImage(document.body, -rect.left, -rect.top);
-
-    // Obtener el color promedio de la esquina superior izquierda
-    const data = context.getImageData(0, 0, 1, 1).data;
-    return [data[0], data[1], data[2]];
-}
-
-function updateTextColor() {
-    const navbarColor = getNavbarVisibleColor();
-    const brightness = getBrightness(navbarColor);
-
-    const menuItems = document.querySelectorAll('.items-menu .textBox1, .items-menu .textBox2');
-
-    menuItems.forEach(item => {
-        item.style.color = brightness < 128 ? 'white' : '#1C86EF';
-    });
-}
-
-window.addEventListener('load', updateTextColor);
-window.addEventListener('scroll', updateTextColor);
 
 
 //scrpt para cambio de imagen
